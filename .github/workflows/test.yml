@@ -1,0 +1,14 @@
+name: Build and deploy ASP.Net Core app 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name : list files
+        shell : bash
+        run  : |
+          ls 
