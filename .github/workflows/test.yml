@@ -11,5 +11,5 @@ jobs:
       - name : list files
         shell : bash
         run  : |
-          ls -S
+          pwd
           echo "hello"
