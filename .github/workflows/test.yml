@@ -1,4 +1,4 @@
-name: Build and deploy ASP.Net Core app 
+name: Test Workflow
 
 on:
   workflow_dispatch:
