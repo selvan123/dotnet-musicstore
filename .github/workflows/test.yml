@@ -22,14 +22,9 @@ jobs:
 
       - name: Nexus Repo Publish
         shell : bash
-        uses: sonatype-nexus-community/nexus-repo-github-action@master
-        with:
-          serverUrl: http://172.23.32.1:8081/
-          username: admin
-          password: admin
-          format: maven2
-          repository: maven-releases
-          coordinates: groupId=com.example artifactId=app version=1.0.0
-          assets: extension=jar
-          filename: ./target/app-1.0.0.jar
-  
+        run  : |
+          curl -v -u admin:admin --upload-file d://log.txt http://172.23.32.1:8081/repository/maven-releases/org/test/1.0/testlog.log
+          
+
+      
+        
