@@ -26,7 +26,7 @@ jobs:
      #   #shell : bash
      #   run  : |
      #     pwd
-          echo "hello"
+     #     echo "hello"
 
      # - name : ps command
      #   #shell : pwsh
