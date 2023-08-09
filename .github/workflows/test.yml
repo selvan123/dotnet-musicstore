@@ -10,19 +10,18 @@ jobs:
       run:
         shell : bash
     steps:
-
     - name: Nexus Repo Publish
       uses: sonatype-nexus-community/nexus-repo-github-action@master
       with:
-        serverUrl: http://172.23.32.1:8081
+        serverUrl: http://163c6cdd.ngrok.io
         username: admin
-        password: admin
+        password: ${{ secrets.password }}
         format: maven2
         repository: maven-releases
         coordinates: groupId=com.example artifactId=app version=1.0.0
-        assets: extension=pom
-        filename: d://log.txt
-
+        assets: extension=jar
+        filename: ./target/app-1.0.0.jar
+        
      # - name : bash command
      #   #shell : bash
      #   run  : |
