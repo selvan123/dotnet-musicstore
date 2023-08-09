@@ -8,8 +8,13 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name : list files
+      - name : bash command
         shell : bash
         run  : |
           pwd
           echo "hello"
+
+      - name : bash command
+        shell : pwsh
+        run  : |
+          write-host "PS -= Hello"
