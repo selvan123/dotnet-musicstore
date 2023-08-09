@@ -34,10 +34,10 @@ jobs:
           assets: extension=pom
           filename: d://log.txt
 
-      - name: Nexus Repo Publish
-        shell : bash
-        run  : |
-          curl -v -u admin:admin --upload-file d://log.txt http://172.23.32.1:8081/repository/maven-releases/org/foo/3.0/foo-3.0.pom
+     # - name: Nexus Repo Publish
+     #   shell : bash
+     #   run  : |
+     #     curl -v -u admin:admin --upload-file d://log.txt http://172.23.32.1:8081/repository/maven-releases/org/foo/3.0/foo-3.0.pom
           
 
       
