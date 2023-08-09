@@ -10,30 +10,32 @@ jobs:
       run:
         shell : bash
     steps:
-      - name : bash command
-        #shell : bash
-        run  : |
-          pwd
+
+    - name: Nexus Repo Publish
+      uses: sonatype-nexus-community/nexus-repo-github-action@master
+      with:
+        serverUrl: http://172.23.32.1:8081
+        username: admin
+        password: admin
+        format: maven2
+        repository: maven-releases
+        coordinates: groupId=com.example artifactId=app version=1.0.0
+        assets: extension=pom
+        filename: d://log.txt
+
+     # - name : bash command
+     #   #shell : bash
+     #   run  : |
+     #     pwd
           echo "hello"
 
-      - name : ps command
-        #shell : pwsh
+     # - name : ps command
+     #   #shell : pwsh
         #run  : |
         #  write-host "PS -= Hello"
 
 
-      - name: Nexus Repo Publish
-        uses: sonatype-nexus-community/nexus-repo-github-action@master
-        with:
-          serverUrl: http://172.23.32.1:8081
-          username: admin
-          password: admin
-          format: maven2
-          repository: maven-releases
-          coordinates: groupId=com.example artifactId=app version=1.0.0
-          assets: extension=pom
-          filename: d://log.txt
-
+        
      # - name: Nexus Repo Publish
      #   shell : bash
      #   run  : |
