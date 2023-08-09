@@ -11,13 +11,13 @@ jobs:
         shell : bash
     steps:
       - name : bash command
-        shell : bash
+        #shell : bash
         run  : |
           pwd
           echo "hello"
 
       - name : ps command
-        shell : pwsh
+        #shell : pwsh
         run  : |
           write-host "PS -= Hello"
 
