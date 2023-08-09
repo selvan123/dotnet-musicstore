@@ -6,7 +6,9 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-
+    defaults:
+      run:
+        shell : bash
     steps:
       - name : bash command
         shell : bash
